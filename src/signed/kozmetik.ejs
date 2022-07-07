@@ -1,0 +1,27 @@
+<%- include("../partials/head") %>
+<% if(kullanici.marketAdmin == "true") { %>
+<%- include("../partials/marketadminnavbar") %> 
+<% } else { %>
+<%- include("../partials/signednavbar") %>
+<% } %>
+<%- include("../partials/marketnavbar") %>  
+<%- include("../partials/jumbotron") %>
+<div class="container m-t">
+<h3 class="m-t">Kozmetik</h3>
+<div class="row">
+<% kozmetik.forEach(kozmetik => { %>
+<div class="col-md-3">
+<div class="card m-t">
+<div class="card-img-top text-center" style="padding-top:2vh;">
+<img src="<%= kozmetik.foto %>" style="border-radius:5px;">
+</div>
+<div class="card-body">
+<h3><%= kozmetik.baslik %></h3>
+<span class="text-success"><b><%= kozmetik.fiyat%>TL</b></span><br><br>
+<span>Satıcı : <%= kozmetik.market %></span>
+</div>  
+</div>  
+</div>  
+<% }) %>
+</div>  
+  </div>
