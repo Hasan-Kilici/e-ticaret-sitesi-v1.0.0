@@ -1,0 +1,23 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+<%- include("../partials/marketnavbar") %> 
+<%- include("../partials/jumbotron") %>
+<div class="container m-t">
+<h3 class="m-t">Elektronik</h3>
+<div class="row">
+<% elektronik.forEach(elektronik => { %>
+<div class="col-md-3">
+<div class="card m-t">
+<div class="card-img-top text-center" style="padding-top:2vh;">
+<img src="<%= elektronik.foto %>" style="border-radius:5px;">
+</div>
+<div class="card-body">
+<h3><%= elektronik.baslik %></h3>
+<span class="text-success"><b><%= elektronik.fiyat%>TL</b></span><br><br>
+<span>Satıcı : <%= elektronik.market %></span>
+</div>  
+</div>  
+</div>  
+<% }) %>
+</div>    
+</div>
