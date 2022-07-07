@@ -1,0 +1,22 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %> 
+<%- include("../partials/marketnavbar") %> 
+<%- include("../partials/jumbotron") %>
+<div class="container m-t">
+ <div class="row">
+<% meyvesebze.forEach(meyvesebze => { %>
+<div class="col-md-3">
+<div class="card m-t">
+<div class="card-img-top text-center" style="padding-top:2vh;">
+<img src="<%= meyvesebze.foto %>" style="border-radius:5px;">
+</div>
+<div class="card-body">
+<h3><%= meyvesebze.baslik %></h3>
+<span class="text-success"><b><%= meyvesebze.fiyat%>TL</b></span><br><br>
+<span>Satıcı : <%= meyvesebze.market %></span>
+</div>  
+</div>  
+</div>  
+<% }) %>
+</div>  
+  </div>
