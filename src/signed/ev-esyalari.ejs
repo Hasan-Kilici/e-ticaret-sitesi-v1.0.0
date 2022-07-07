@@ -1,0 +1,27 @@
+<%- include("../partials/head") %>
+<% if(kullanici.marketAdmin == "true") { %>
+<%- include("../partials/marketadminnavbar") %> 
+<% } else { %>
+<%- include("../partials/signednavbar") %>
+<% } %>
+<%- include("../partials/marketnavbar") %>  
+<%- include("../partials/jumbotron") %>
+<div class="container m-t">
+<h3 class="m-t">Ev eşyaları</h3>
+<div class="row">
+<% evesyalari.forEach(evesyalari => { %>
+<div class="col-md-3">
+<div class="card m-t">
+<div class="card-img-top text-center" style="padding-top:2vh;">
+<img src="<%= evesyalari.foto %>" style="border-radius:5px;">
+</div>
+<div class="card-body">
+<h3><%= evesyalari.baslik %></h3>
+<span class="text-success"><b><%= evesyalari.fiyat%>TL</b></span><br><br>
+<span>Satıcı : <%= evesyalari.market %></span>
+</div>  
+</div>  
+</div>  
+<% }) %>
+</div>  
+</div>
