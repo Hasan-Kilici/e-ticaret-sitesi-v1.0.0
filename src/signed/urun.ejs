@@ -1,0 +1,27 @@
+<%- include("../partials/head") %>
+<% if(kullanici.marketAdmin == "true") { %>
+<%- include("../partials/marketadminnavbar") %> 
+<% } else { %>
+<%- include("../partials/signednavbar") %>
+<% } %>
+<%- include("../partials/marketnavbar") %> 
+<div class="container m-t">
+<div class="row justify-content-center">
+<div class="col-md-5">
+<div class="foto">
+<img src="<%= urun.foto %>">  
+</div>  
+</div>
+<div class="col-md-5 urun-content">
+<h3><%= urun.baslik %></h3>
+<label>Satıcı : <%= urun.aciklama %></label>
+<label class="m-t"><%= urun.market %></label><br>
+<span style="font-size:1.5em" class="m-t m-b text-success"><b><%= urun.fiyat %></b>TL</span>
+<form style="width:100%" method="POST" action="/sepete/ekle/<%= urun.id %>">
+<button style="width:40%" class="btn bg-dark btn-dark">
+<i class="fal fa-shopping-basket"></i> Sepete ekle
+</button> 
+</form>
+</div>
+</div>  
+</div>
