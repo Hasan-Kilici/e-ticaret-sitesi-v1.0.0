@@ -1,4 +1,4 @@
-# e-ticaret-sitesi
+# e-ticaret-sitesi V 1.0.0
 Express , EJS ve MongoDB kullanarak Yaptığım E-Ticaret Sitesi
 
 Yapılması gerekenler
